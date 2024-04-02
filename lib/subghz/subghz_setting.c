@@ -11,12 +11,15 @@
 #define SUBGHZ_SETTING_FILE_TYPE "Flipper SubGhz Setting File"
 #define SUBGHZ_SETTING_FILE_VERSION 1
 
-#define FREQUENCY_FLAG_DEFAULT (1 << 31)
-#define FREQUENCY_MASK (0xFFFFFFFF ^ FREQUENCY_FLAG_DEFAULT)
+#define FREQUENCY_FLAG_ (1 << 31)
+#define FREQUENCY_MASK (0xFFFFFFFF ^ FREQUENCY_FLAG)
 
 /* Default */
 static const uint32_t subghz_frequency_list[] = {
-    /* 300 - 348 */
+ 
+    /* 280 - 386 */
+    280000000,
+    290000000,
     300000000,
     302757000,
     303875000,
@@ -63,7 +66,9 @@ static const uint32_t subghz_frequency_list[] = {
     464000000,
     467750000,
 
-    /* 779 - 928 */
+    /* 700 - 928 */
+
+    700000000,
     779000000,
     868350000,
     868400000,
@@ -77,13 +82,16 @@ static const uint32_t subghz_frequency_list[] = {
 };
 
 static const uint32_t subghz_hopper_frequency_list[] = {
+    290000000,
+    300000000,
     310000000,
+    312000000,
     315000000,
     318000000,
     418000000,
     433920000,
     868350000,
-    0,
+    925000000,
 };
 
 typedef struct {
